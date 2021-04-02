@@ -1,0 +1,34 @@
+{%extends "base.html"%}
+
+{%block link%}<link rel = "stylesheet" href = "../static/review.css">
+              <link rel = "stylesheet" href = "../static/mainpage.css">
+{%endblock%}
+
+{%block body%}
+      <form class = "form" method="post">
+          <div style="display:flex;">
+    <input type="text" placeholder = "type here..." name = "searchholder" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <button style = "margin-left: 50px;" type="submit" class="btn btn-outline-success">Submit</button>
+              </div>
+      </form>
+
+         <div class = "sect container mt-5">
+        <h1>Results</h1>
+          <div class = "row row-cols-xl-3 row-cols-md-2 row-cols-1">
+              {% for el in films%}
+     <div class="col">
+                    <div class="card mb-3">
+    <img height="200px" src={{el.photo}} class="card-img-top" alt={{el.title}}>
+    <div class="card-body">
+        <h5 class="card-title">{{el.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{el.short_desc}}</h6>
+        <p class="card-text">Actors: {{el.actors}}</p>
+        <p class="card-text">Price: {{el.price}} RUB</p>
+        <a href="/{{el.id}}" class="btn btn-primary">More</a>
+    </div>
+</div>
+                </div>
+              {%endfor%}
+        </div>
+      </div>
+{%endblock%}

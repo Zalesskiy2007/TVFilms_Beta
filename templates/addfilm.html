@@ -1,0 +1,33 @@
+{%extends "base.html"%}
+
+{%block link%}<link rel = "stylesheet" href = "../static/review.css">{%endblock%}
+
+{%block body%}
+      <form class = "form" method="post">
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Title</label>
+    <input type="text" class="form-control" name = "title" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Photo</label>
+    <input type="text" class="form-control" name = "photo" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Video</label>
+    <input type="text" class="form-control" name = "video" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Description (Min 10 words)</label>
+     <textarea class="form-control" name = "description" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+ <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Actors</label>
+    <input type="text" class="form-control" name = "actors" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Price (RUB)</label>
+    <input type="number" min="0" class="form-control" name = "price" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+{%endblock%}

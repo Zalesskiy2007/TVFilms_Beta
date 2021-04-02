@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+
+{%block link%}<link rel = "stylesheet" href = "../static/review.css">{%endblock%}
+
+{%block body%}
+      <form class = "form" method="post">
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Your review</label>
+     <textarea class="form-control" name = "review" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+{%endblock%}

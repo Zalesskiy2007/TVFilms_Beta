@@ -1,0 +1,29 @@
+{%extends "base.html"%}
+
+{%block link%}<link rel = "stylesheet" href = "../static/review.css">{%endblock%}
+
+{%block body%}
+      <form class = "form" method="post">
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">First Name</label>
+    <input type="text" name = "firstn" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Last name</label>
+    <input type="text" name = "lastn" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Login</label>
+     <input type = "text" class="form-control" name = "login" id="exampleFormControlTextarea1" rows="3">
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+     <input type = "password" class="form-control" name = "password" id="exampleFormControlTextarea1" rows="3">
+  </div>
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Repeat password</label>
+     <input type = "password" class="form-control" name = "repeat_password" id="exampleFormControlTextarea1" rows="3">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+{%endblock%}

@@ -1,0 +1,74 @@
+{%extends "base.html"%}
+
+{%block link%}
+    <style>
+        .head{
+            background: url("{{mov.photo}}") center no-repeat;
+            background-size: cover;
+            height: 600px;
+        }   
+        body{
+              background-color: #121336;
+              color: aliceblue;
+          }
+        .desc{
+            text-align: center;
+        }
+        .title{
+            margin-top: 20px;
+        }
+        .other{
+            text-align: center;
+            margin-bottom: 50px;
+            margin-top: 15px;
+        }
+        .tt{
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+        .rblock{
+            margin-top: 30px;
+        }
+        .reviews{
+            background: #2b4357;
+            border: 2px solid #9c2748;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-right: 20px;
+            margin-left: 20px;
+            border-radius: 10px;
+            padding-left: 20px;
+            padding-bottom: 10px;
+        }
+        .name{
+            font-size: 20px;
+        }
+    
+    </style>
+{%endblock%}
+
+{%block body%}
+    <div class = "head"></div>
+<div class = "title">
+    <h2 align = "center">{{mov.title}}</h2>
+    <hr>
+</div>
+<div class = "desc">
+    <p>{{mov.description}}</p>
+</div>
+<div class = "other">
+    <a href = "/review/{{mov.id}}" class="btn btn-primary tt">Review</a>
+    <a href = "{{mov.video}}" target="_blank" class="btn btn-primary tt">Watch</a>
+    <a href="/home" class="btn btn-primary tt">Home</a>
+</div>
+<div class = "rblock">
+    <h1 align = "center">Reviews</h1>
+    <hr>
+</div>
+{%for el in rev%}
+<div class = "reviews">
+    <div class = "name">{{el.first}} {{el.last}}</div>
+    <div class = "mainp">{{el.review}}</div>
+</div>
+{%endfor%}
+{%endblock%}
